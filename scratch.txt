@@ -1,0 +1,30 @@
+pokemon_db-# ;
+ id |    name    |   poke_type   | cp  |                     img_url
+----+------------+---------------+-----+--------------------------------------------------
+  1 | Charmander | fire          | 114 | https://img.pokemondb.net/artwork/charmander.jpg
+  2 | Squirtle   | water         | 691 | https://img.pokemondb.net/artwork/squirtle.jpg
+  3 | Pikachu    | lightning     | 345 | https://img.pokemondb.net/artwork/pikachu.jpg
+  4 | Bulbasaur  | grass         | 378 | https://img.pokemondb.net/artwork/bulbasaur.jpg
+  5 | Clefairy   | fairy         | 584 | https://img.pokemondb.net/artwork/clefairy.jpg
+  6 | Nidoking   | poison ground | 335 | https://img.pokemondb.net/artwork/nidoking.jpg
+  7 | Gengar     | ghost poison  | 412 | https://img.pokemondb.net/artwork/gengar.jpg
+  8 | Blastoise  | water         | 259 | https://img.pokemondb.net/artwork/blastoise.jpg
+(8 rows)
+
+
+
+
+FOR POKEMONS/index.erb
+
+<ul>
+  <% @pokemons.each do |pokemon| %>
+    <li>
+      <a href="/pokemons/<%= pokemon.id %>">
+        <%= pokemon.name %>
+        <%= pokemon.type %>
+        <%= pokemon.cp %>
+        <%= pokemon.image_url %>
+      </a>
+    </li>
+  <% end %>
+</ul>
