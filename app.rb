@@ -11,6 +11,9 @@ require_relative 'db/connection.rb'
 # Load models
 require_relative 'models/pokemon'
 
+get "/" do
+  erb :index
+end
 
 # index
 get "/pokemons" do
