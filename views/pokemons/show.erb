@@ -1,5 +1,6 @@
-<h2><%= @pokemon.name %></h2>
+<h2><%= @pokemon.name %> <a href="/pokemons/<%= @pokemon.id %>/edit">(Update)</a></h2>
 <h4><%= @pokemon.poke_type %></h4>
-<h4?<%= @pokemon.cp%></h4>
+<h4><%= @pokemon.cp %></h4>
 
 <img class='poke_pic' src="<%= @pokemon.img_url %>">
+ 

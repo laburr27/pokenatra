@@ -11,6 +11,12 @@ pokemon_db-# ;
   8 | Blastoise  | water         | 259 | https://img.pokemondb.net/artwork/blastoise.jpg
 (8 rows)
 
+DELETE
+
+<form action="/pokemons/<%= @pokemon.id %>" method="put">
+  <input type="hidden" name="_method" value="delete">
+  <input class="button-delete" type="submit" value="Delete!">
+</form>
 
 
 

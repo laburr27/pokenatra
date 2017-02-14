@@ -18,11 +18,16 @@ get "/pokemons" do
   erb :"pokemons/index"
 end
 
-
-
 # new
+get "/pokemons/new" do
+  erb :"pokemons/new"
+end
 
 # create
+post "/pokemons" do
+  @pokemon = Pokemon.create!(params[:pokemon])
+  redirect("pokemons/#{@pokemon.id}")
+end
 
 # show
 get "/pokemons/:id" do
@@ -31,7 +36,21 @@ get "/pokemons/:id" do
 end
 
 # edit
+get "/pokemons/:id/edit" do
+  @pokemon = Pokemon.find(params[:id])
+  erb :"pokemons/edit"
+end
 
 # update
+put "/pokemons/:id" do
+  @pokemon = Pokemon.find(params[:id])
+  @pokemon.update(params[:pokemon])
+  redirect("/pokemons/#{@pokemon.id}")
+end
 
-# destroy
+# delete
+delete "/pokemons/:id" do
+  @pokemon = Pokemon.find(params[:id])
+  @pokemon.destroy
+  redirect to("/pokemons")
+end
