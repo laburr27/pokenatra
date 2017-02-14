@@ -5,21 +5,23 @@
     <link rel="stylesheet" type="text/css" href="/css/pokestyle.css"
   </head>
 
+<div class="container">
+  <h1>Catch a Pokemon</h1>
+    <br>
+      <form action="/pokemons" method="post" >
+        <label for="pokemon[name]">Name:</label>
+        <input name="pokemon[name]">
 
-<h2>Catch a Pokemon</h2>
+        <label for="pokemon[poke_type]">Type:</label>
+        <input name="pokemon[poke_type]">
 
-<form action="/pokemons" method="post" >
-  <label for="pokemon[name]">Name:</label>
-  <input name="pokemon[name]">
+        <label for="pokemon[cp]">CP:</label>
+        <input name="pokemon[cp]">
 
-  <label for="pokemon[poke_type]">Type:</label>
-  <input name="pokemon[poke_type]">
+        <label for="pokemon[img_url]">Photo URL:</label>
+        <input name="pokemon[img_url]">
 
-  <label for="pokemon[cp]">CP:</label>
-  <input name="pokemon[cp]">
-
-  <label for="pokemon[img_url]">Photo URL:</label>
-  <input name="pokemon[img_url]">
-
-  <input type="submit" value="CATCH">
-</form>
+        <input class="button" type="submit" value="CATCH">
+      </form>
+    <br>
+</div>

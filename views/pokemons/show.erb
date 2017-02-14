@@ -5,9 +5,12 @@
     <link rel="stylesheet" type="text/css" href="/css/pokestyle.css"
   </head>
 
-
-<h2><%= @pokemon.name %> <a href="/pokemons/<%= @pokemon.id %>/edit">(Update)</a></h2>
-<h3><%= @pokemon.poke_type %></h4>
-<h3><%= @pokemon.cp %></h4>
-
-<img class='poke_pic' src="<%= @pokemon.img_url %>">
+<div class="pokemon">
+  <h1><%= @pokemon.name %></h1>
+  <br>
+    <img src="<%= @pokemon.img_url %>">
+      <h2>Type: <%= @pokemon.poke_type %></h2>
+      <h2>CP: <%= @pokemon.cp %></h2>
+        <h4><a href="/pokemons/<%= @pokemon.id %>/edit">*** EVOLVE this Pokemon! ***</a></h4>
+  <br>
+</div>
