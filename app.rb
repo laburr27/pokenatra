@@ -26,7 +26,7 @@ end
 # create
 post "/pokemons" do
   @pokemon = Pokemon.create!(params[:pokemon])
-  redirect("pokemons/#{@pokemon.id}")
+  redirect "pokemons/#{@pokemon.id}"
 end
 
 # show
@@ -45,12 +45,12 @@ end
 put "/pokemons/:id" do
   @pokemon = Pokemon.find(params[:id])
   @pokemon.update(params[:pokemon])
-  redirect("/pokemons/#{@pokemon.id}")
+  redirect "/pokemons/#{@pokemon.id}"
 end
 
 # delete
 delete "/pokemons/:id" do
   @pokemon = Pokemon.find(params[:id])
   @pokemon.destroy
-  redirect to("/pokemons")
+  redirect "/pokemons"
 end
